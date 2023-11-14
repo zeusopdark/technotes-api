@@ -12,7 +12,12 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3500
 
 connectDB()
-app.use(cors())
+const corsOptions = {
+    origin: "https://technotes-28n5.onrender.com",
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 
 
